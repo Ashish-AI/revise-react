@@ -20,11 +20,15 @@ import React from "react";
 import ReactDOM from "react-dom";
 import Heading from "./Heading";
 import List from "./List";
+import * as pi from "./math.js";
 
 ReactDOM.render(
   <div>
     <Heading></Heading>
     <List></List>
+    <li>{pi.default}</li>
+    <li>{pi.doublePi()}</li>
+    <li>{pi.triplePi()}</li>
   </div>,
   document.getElementById("root")
 );
