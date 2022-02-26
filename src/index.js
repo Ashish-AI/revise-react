@@ -18,23 +18,13 @@
 
 import React from "react";
 import ReactDOM from "react-dom";
-
-const firstName = "Ashish";
-const lastName = "Chaubey";
-
-const customStyle = { color: "red", fontSize: "40px" };
-customStyle.color = "green";
+import Heading from "./Heading";
+import List from "./List";
 
 ReactDOM.render(
   <div>
-    <h1 style={customStyle}>
-      Hello my name is {firstName} {lastName}
-    </h1>
-    <ul>
-      <li>Item1</li>
-      <li>Item2</li>
-      <li>Item3</li>
-    </ul>
+    <Heading></Heading>
+    <List></List>
   </div>,
   document.getElementById("root")
 );
