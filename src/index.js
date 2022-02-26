@@ -19,14 +19,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+const firstName = "Ashish";
+const lastName = "Chaubey";
+
 ReactDOM.render(
   <div>
-    <h1>My fav food</h1>
-    <ul>
-      <li>Bacon</li>
-      <li>Jamon</li>
-      <li>Noodles</li>
-    </ul>
+    <h1>
+      Hello my name is {firstName} {lastName}
+    </h1>
+    <p>My reg number is {11802480 + 2}</p>
   </div>,
   document.getElementById("root")
 );
