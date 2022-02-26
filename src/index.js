@@ -24,10 +24,14 @@ const lastName = "Chaubey";
 
 ReactDOM.render(
   <div>
-    <h1>
+    <h1 className="heading">
       Hello my name is {firstName} {lastName}
     </h1>
-    <p>My reg number is {11802480 + 2}</p>
+    <ul>
+      <li>Item1</li>
+      <li>Item2</li>
+      <li>Item3</li>
+    </ul>
   </div>,
   document.getElementById("root")
 );
