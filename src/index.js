@@ -22,9 +22,12 @@ import ReactDOM from "react-dom";
 const firstName = "Ashish";
 const lastName = "Chaubey";
 
+const customStyle = { color: "red", fontSize: "40px" };
+customStyle.color = "green";
+
 ReactDOM.render(
   <div>
-    <h1 className="heading">
+    <h1 style={customStyle}>
       Hello my name is {firstName} {lastName}
     </h1>
     <ul>
