@@ -1,12 +1,12 @@
 import React from "react";
 
-function Header() {
+function Note(props) {
+  console.log(props);
   return (
     <div className="note">
-      <h1> This is a title</h1>
-      <p>This is content</p>
+      <h1> {props.title}</h1>
+      <p>{props.subtitle}</p>
     </div>
   );
 }
-
-export default Header;
+export default Note;
