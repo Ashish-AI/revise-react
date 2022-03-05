@@ -22,15 +22,37 @@ function Button() {
   // const backgroundColor = "black";
   // const textColor = "white";
 
-  const [firstName, setFirstName] = React.useState("");
-  const [lastName, setlastName] = React.useState("");
+  // const [firstName, setFirstName] = React.useState("");
+  // const [lastName, setlastName] = React.useState("");
+  const [name, setName] = React.useState({
+    fName: "",
+    lName: "",
+  });
 
   function handleChange(event) {
-    setFirstName(event.target.value);
+    // setFirstName(event.target.value);
+    const name = event.target.name;
+    const value = event.target.value;
+
+    console.log(name);
+
+    setName((prevValue) => {
+      // console.log(name.fName);
+      // console.log(name.lName);
+      if (name === "fName") {
+        return {
+          fName: value,
+          lName: prevValue,
+        };
+      } else if (name === "lName") {
+        return {
+          fName: prevValue,
+          lName: value,
+        };
+      }
+    });
   }
-  function handleChange1(event) {
-    setlastName(event.target.value);
-  }
+
   function handleSubmit() {}
 
   return (
@@ -48,20 +70,20 @@ function Button() {
       >
         Click
       </button>
-      <h3>
-        Hello {firstName} {lastName}
-      </h3>
+      <h3>{/* Hello {name.fName} {name.lName} */}</h3>
       <input
+        name="fName"
         onChange={handleChange}
         type="text"
         placeholder="First Name"
-        value={firstName}
+        value={name.fName}
       ></input>
       <input
-        onChange={handleChange1}
+        name="lName"
+        onChange={handleChange}
         type="text"
         placeholder="Last Name"
-        value={lastName}
+        value={name.lName}
       ></input>
       <button onSubmit={handleSubmit}>Submit</button>
     </div>
