@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 import details from "./details";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -19,6 +20,7 @@ function App() {
     <div>
       <Header></Header>
       <p> {details.map(createNote)}</p>
+      <Button></Button>
       <Footer></Footer>
     </div>
   );
